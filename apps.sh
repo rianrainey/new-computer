@@ -12,7 +12,7 @@ echo "Starting brew app install..."
 brew_casks=(
   1password
   alfred
-  chatgpt 
+  chatgpt
   cursor
   dash
   dbeaver-community
@@ -34,7 +34,7 @@ brew_casks=(
 # Casks you don't want to install at client
 client_denylist=(
   1password # they already use this
-  chatgpt 
+  chatgpt
   cursor # not allowed
   fantastical # not allowed
 )
@@ -47,9 +47,12 @@ for cask in "${brew_casks[@]}"; do
   fi
 done
 
+# Get the list of installed casks once
+installed_casks=$(brew list --cask)
+
 # Loop through the filtered list
 for cask in "${filtered_brew_casks[@]}"; do
-  if brew list --cask "$cask" &>/dev/null; then
+  if echo "$installed_casks" | grep -q "^$cask$"; then
     echo "$cask is already installed"
   else
     brew install --cask "$cask"
