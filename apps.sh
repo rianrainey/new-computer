@@ -24,6 +24,7 @@ brew_casks=(
   loom
   notion
   postman
+  rectangle
   spotify
   superhuman
   visual-studio-code
