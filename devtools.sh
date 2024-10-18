@@ -11,6 +11,9 @@ brew_devtools=(
   lazygit
   neovim
   npm
+  jordanbaird-ice
+  ollama
+  pnpm
   pnpm
   stow
   yarn
