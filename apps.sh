@@ -16,14 +16,17 @@ brew_casks=(
   cursor
   dash
   dbeaver-community
+  google-chrome
   fantastical
   firefox
   flux
   iterm2
+  jordanbaird-ice
   logi-options+ # require reboot
   loom
   notion
   postman
+  ollama
   rectangle
   spotify
   superhuman
@@ -34,10 +37,10 @@ brew_casks=(
 
 # Casks you don't want to install at client
 client_denylist=(
-  1password # they already use this
-  chatgpt
-  cursor # not allowed
-  fantastical # not allowed
+#  1password # they already use this
+#  chatgpt
+#  cursor # not allowed
+#  fantastical # not allowed
 )
 
 # Subtract client_denylist from brew_casks
@@ -59,3 +62,8 @@ for cask in "${filtered_brew_casks[@]}"; do
     brew install --cask "$cask"
   fi
 done
+
+# Pull down ollama
+echo 'Pulling down llms...'
+./locallm.sh
+echo 'Done!'

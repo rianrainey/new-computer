@@ -2,15 +2,11 @@ echo "Starting brew devtools install..."
 
 brew_devtools=(
   asdf
-  git
+  gh
   git-lfs
-  grep
-  less
   npm
   pnpm
-  vim
   wget
-  zsh
 )
 
 # Get the list of installed casks once
@@ -20,6 +16,7 @@ for tool in "${brew_devtools[@]}"; do
   if echo "$installed_tools" | grep -q "^$tool$"; then
     echo "$tool is already installed"
   else
+    echo "Installing $tool..."
     brew install "$tool"
   fi
 done
@@ -29,3 +26,6 @@ done
 #echo '. /opt/homebrew/opt/asdf/libexec/asdf.sh' >> ~/.zshrc
 #source ~/.zshrc
 #echo "asdf post-install completed"
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -2,77 +2,30 @@
 ### Installs from Mac App Store
 #############################################
 
-echo "Installing apps from the App Store..."
+# echo "Installing apps from the App Store..."
 
-### find app ids with: mas search "app name"
-brew install mas
+# ### find app ids with: mas search "app name"
+# brew install mas
 
-### Mas login is currently broken on mojave. See:
-### Login manually for now.
+# ### Mas login is currently broken on mojave. See:
+# ### Login manually for now.
 
-cecho "Need to log in to App Store manually to install apps with mas...." $red
-echo "Opening App Store. Please login."
-open "/Applications/App Store.app"
-echo "Is app store login complete.(y/n)? "
-read response
-if [ "$response" != "${response#[Yy]}" ]
-then
-	mas install 907364780  # Tomato One - Pomodoro timer
-	mas install 485812721  # Tweetdeck
-	mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
-	mas install 1351639930 # Gifski, convert videos to gifs
-	mas install 414030210  # Limechat, IRC app.
-else
-	cecho "App Store login not complete. Skipping installing App Store Apps" $red
-fi
+# cecho "Need to log in to App Store manually to install apps with mas...." $red
+# echo "Opening App Store. Please login."
+# open "/Applications/App Store.app"
+# echo "Is app store login complete.(y/n)? "
+# read response
+# if [ "$response" != "${response#[Yy]}" ]
+# then
+# 	mas install 907364780  # Tomato One - Pomodoro timer
+# 	mas install 485812721  # Tweetdeck
+# 	mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
+# 	mas install 1351639930 # Gifski, convert videos to gifs
+# 	mas install 414030210  # Limechat, IRC app.
+# else
+# 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
+# fi
 
-
-#############################################
-### Install few global python packages
-#############################################
-
-echo "Installing global Python packages..."
-
-pip3 install --upgrade pip
-pip3 install --user pylint
-pip3 install --user flake8#############################################
-### Installs from Mac App Store
-#############################################
-
-echo "Installing apps from the App Store..."
-
-### find app ids with: mas search "app name"
-brew install mas
-
-### Mas login is currently broken on mojave. See:
-### Login manually for now.
-
-cecho "Need to log in to App Store manually to install apps with mas...." $red
-echo "Opening App Store. Please login."
-open "/Applications/App Store.app"
-echo "Is app store login complete.(y/n)? "
-read response
-if [ "$response" != "${response#[Yy]}" ]
-then
-	mas install 907364780  # Tomato One - Pomodoro timer
-	mas install 485812721  # Tweetdeck
-	mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
-	mas install 1351639930 # Gifski, convert videos to gifs
-	mas install 414030210  # Limechat, IRC app.
-else
-	cecho "App Store login not complete. Skipping installing App Store Apps" $red
-fi
-
-
-#############################################
-### Install few global python packages
-#############################################
-
-echo "Installing global Python packages..."
-
-pip3 install --upgrade pip
-pip3 install --user pylint
-pip3 install --user flake8
 
 #############################################
 ### Set OSX Preferences - Borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
@@ -88,17 +41,17 @@ osascript -e 'tell application "System Preferences" to quit'
 ##################
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
+# defaults write com.apple.finder QuitMenuItem -bool true
 
 # Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Expand save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+# defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -116,10 +69,12 @@ defaults write com.apple.dock static-only -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+# I wasn't warned
+# defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+# Not needed
+# defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -130,6 +85,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+# didn't work for me. Maybe I need to restart?
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Minimize windows into their application’s icon
