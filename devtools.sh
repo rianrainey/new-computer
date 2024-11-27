@@ -1,12 +1,15 @@
 echo "Starting brew devtools install..."
 
 brew_devtools=(
+  node # needed first
+
   asdf
   gh
   git-lfs
+  lazygit
   npm
   pnpm
-  wget
+  yarn
 )
 
 # Get the list of installed casks once
