@@ -21,6 +21,10 @@ for tool in "${brew_devtools[@]}"; do
   else
     echo "Installing $tool..."
     brew install "$tool"
+    if [ "$tool" = "asdf" ]; then
+      echo "Running asdf configuration..."
+      ./asdf.sh
+    fi
   fi
 done
 
