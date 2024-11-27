@@ -35,4 +35,8 @@ done
 #echo "asdf post-install completed"
 
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ -d "$HOME/.oh-my-zsh" ]; then
+  echo "oh-my-zsh is already installed."
+else
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
