@@ -4,7 +4,6 @@ My personal installation script for a new computer.
 
 Note, this sets up an extremely opinionated and highly personalized installation, with my preferences and dotfiles. Please adjust as needed!
 
-My dotfile repo is currently private, but I plan on creating a public repo before the end of the year.
 
 Some resources borrowed from:
 
@@ -53,7 +52,7 @@ Unchecked:
 **Keyboard**
 
 * Delay until repeat = short
-* Key repeat reate = fast
+* Key repeat repeat = fast
 * Modifier Keys
   * Caps Lock -> ^ Control (do this for every keyboard)
   * Dictation
