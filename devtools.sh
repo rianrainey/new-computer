@@ -14,7 +14,6 @@ brew_devtools=(
   jordanbaird-ice
   ollama
   pnpm
-  pnpm
   stow
   yarn
 )
