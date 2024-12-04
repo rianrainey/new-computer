@@ -3,12 +3,16 @@ echo "Starting brew devtools install..."
 brew_devtools=(
   node # needed first
 
-  asdf
+  asdf # version manager
+  als
+  cheat # https://github.com/cheat/cheat
   gh
   git-lfs
   lazygit
+  neovim
   npm
   pnpm
+  stow
   yarn
 )
 
