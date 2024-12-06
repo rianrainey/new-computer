@@ -3,8 +3,7 @@ echo "Starting brew devtools install..."
 brew_devtools=(
   node # needed first
 
-  asdf # version manager
-  als
+  asdf  # version manager
   cheat # https://github.com/cheat/cheat
   gh
   git-lfs
@@ -15,6 +14,8 @@ brew_devtools=(
   ollama
   pnpm
   stow
+  tmux
+  tmuxinator
   yarn
 )
 
