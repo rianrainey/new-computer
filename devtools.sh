@@ -7,6 +7,7 @@ brew_devtools=(
   cheat # https://github.com/cheat/cheat
   gh
   git-lfs
+  kindle
   lazygit
   neovim
   npm
