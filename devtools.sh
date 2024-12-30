@@ -5,19 +5,30 @@ brew_devtools=(
 
   asdf  # version manager
   cheat # https://github.com/cheat/cheat
+  fd
+  ffmpeg
+  font-symbols-only-nerd-font
+  fzf
   gh
   git-lfs
+  imagemagick
+  jordanbaird-ice
+  jq
   kindle
   lazygit
   neovim
   npm
-  jordanbaird-ice
   ollama
   pnpm
+  poppler
+  ripgrep
+  sevenzip
   stow
   tmux
   tmuxinator
   yarn
+  yazi
+  zoxide
 )
 
 # Get the list of installed casks once
